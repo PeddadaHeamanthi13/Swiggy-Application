@@ -1,0 +1,158 @@
+<html>
+<head>
+<style>
+BODY {
+ 	      
+                      
+                       background-image:url("33.jpg"); 
+                       background-repeat: no-repeat;
+                       background-size: 100% 100%;
+                   }
+text{
+
+      background-color:;
+      border-radius:20px;
+}
+
+</style>
+<script type="text/javascript">
+
+function valid()
+{
+   var i=0;
+   var b= /^[A-Za-z]+$/;
+   var a=f.fname.value;
+  var c=f.pw.value;
+  var d=f.cpw.value;
+  while(1)
+{
+   if(a.length<6){
+     f.fname.value="min 6 chars required";
+     document.getElementById("user").style.color = '#d00';
+     break;
+    }
+   if(b.test(a)){
+     i=i+1;
+     break;}
+   else{
+     f.fname.value="enter alphabets";
+    document.getElementById("user").style.color = '#d00';
+     break;
+  }
+ }
+ while(1)
+{
+    if(c.length<6){
+      f.pw.value="should contain 6 chars";
+      document.getElementById("pass").style.color = '#d00'
+      break;}
+    if(c!=d){
+      f.cpw.value="not matched";
+      document.getElementById("cpass").style.color = '#d00';
+      break;
+    }
+    else
+    {
+     i=i+1;
+     break;
+     }
+}
+
+while(1)
+{
+
+var x=new RegExp("^[a-z]+[a-z0-9]+@(gmail).(com)$","g");
+var y=f.txtname.value;
+if(x.test(y)){
+  i=i+1;
+  break;}
+else{
+  f.txtname.value="invalid email";
+document.getElementById("email").style.color = '#d00';
+
+  break; 
+
+
+}
+}  
+while(1){
+ var t=/[0-9]{10}$/;
+var g=f.ph.value;
+if(t.test(g))
+{
+    i=i+1;
+    break;
+}
+else
+{
+     f.ph.value="invalid number";
+document.getElementById("phone").style.color = '#d00';
+ break;
+
+}
+if(g.length==10)
+{
+    i=i+1;
+   break;
+
+}
+else
+{
+     f.ph.value="invalid";
+     document.getElementById("phone").style.color = '#d00';
+    break;
+}
+    
+
+} 
+
+if(i==4)
+{
+   alert("you had succesfully registered")
+}
+  
+}
+</script>
+</head>
+
+<body >
+<center><form name="f">
+<table>
+<h2 align="center"><i><font color="darkred">REGISTER <p>TO ORDER GOOD FOOD!!!</p></font></i></h2>
+<tr>
+<td align="right" ><b><i><font color="darorange">USERNAME:</font></i></b></td>
+<td><input type="text" name="fname" maxlength="30" size="40" id="user" placeholder="enter name with 6 chars"></td>
+</tr>
+<br>
+
+<tr>
+<td align="right"><b><i><font color="darorange">PASSWORD:</font></i></b></td>
+<td align="left"><input type="text" maxlength="30" size="40"name="pw" id="pass" placeholder="enter password with 6 chars"></td>
+</tr>
+<tr>
+<td align="right"><b><i><font color="darorange">CONFIRMPASSWORD:</font></i></b></td>
+<td align="left"><input type="text" maxlength="30" size="40"name="cpw" id="cpass" placeholder="enter pass again"></td>
+</tr>
+<tr>
+<td align="right"><b><i><font color="darorange">EMAIL-ID:</font></i></b></td>
+<td align="left"><input type="text" maxlength="50"  size="50" name="txtname" id="email" placeholder="enter e mail"></td>
+</tr>
+<tr>
+<td align="right"><b><i><font color="darorange">PHONE NO:</font></i></b></td>
+<td align="left"><input type="text" maxlength="15" size="40" name="ph" id="phone" placeholder="enter phone number"></td>
+</tr>
+<tr>
+<td align="right"><b><i><font color="darorange">DATE OF BIRTH:</font></i></b></td>
+<td align="left"><input type="date"></td>
+</tr>
+ <tr>
+         <td align="right"><b><i><font color="darorange">SEX:</font></i></b></td>
+         <td align="left" style="color:yellow"><input type="radio" name="Gender" value="m"><b>MALE</b>
+          <input type="radio" name="Gender" value="f"><b>FEMALE</b></font></td>
+       </tr>
+</table>
+<input type="button" value="SUBMIT"  onClick="valid()"/>
+</form>
+</center>
+</body>
+</html>

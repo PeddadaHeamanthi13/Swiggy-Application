@@ -1,0 +1,85 @@
+<html>
+<head>
+<style>
+BODY {
+ 	      
+                      
+                       background-image:url("33.jpg"); 
+                       background-repeat: no-repeat;
+                       background-size: 100% 100%;
+                   }
+text{
+
+ background-color:green;
+ border-radius:20px;
+}
+
+</style>
+<script type="text/javascript">
+function buttonu()
+{
+   var i=0;
+   var b= /^[A-Za-z]+$/;
+   var a=f.fname.value;
+  var c=f.pw.value;
+  while(1)
+{
+   if(a.length<6){
+     f.fname.value="min 6 chars required";
+     document.getElementById("user").style.color = '#d00';
+     break;
+    }
+   if(b.test(a)){
+     i=i+1;
+     break;}
+   else{
+     f.fname.value="enter alphabets";
+    document.getElementById("user").style.color = '#d00';
+     break;
+  }
+ }
+ while(1)
+{
+    if(c.length<6){
+      f.pw.value="should contain 6 chars";
+      document.getElementById("pass").style.color = '#d00'
+      break;}
+    
+    else
+    {
+     i=i+1;
+     break;
+     }
+}
+if(i == 2)
+{
+  alert(" login Sucess");
+}
+else
+{
+     alert(" login fail");
+}
+}
+</script>
+</head>
+<body>
+
+<center><form name="f">
+<table>
+<h2 align="center"><i><font color="darkblue">LOGIN</font></i></h2>
+<tr>
+<td align="right"><i>USERNAME:</i></td>
+<td><input type="text" name="fname" maxlength="30" size="40" id="user" placeholder="enter name with 6 chars"></td>
+</tr>
+<br>
+
+<tr>
+<td align="right"><i>PassWord:</i></td>
+<td align="left"><input type="text" maxlength="30" size="40"name="pw" id="pass" placeholder="enter password with 6 chars"></td>
+</tr>
+</table>
+<input type="button" value="SUBMIT"  onClick="buttonu()"/>
+</form>
+</center>
+</body>
+</html>

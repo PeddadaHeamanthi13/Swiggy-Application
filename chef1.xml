@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="chef2.xsl"?>
+<swiggy>
+	<about>
+		<hotel>Paradise</hotel>
+		<orders>2</orders>
+		<time>3:00PM</time>
+	    <place>gajuwaka</place>
+	</about>                                                                   
+	<about>
+		<hotel>Barbequee</hotel>
+		<orders>1</orders>
+		<time>5:00PM</time>
+	    <place>gajuwaka</place>
+	</about>
+                <about>
+		<hotel>Ice on Fire</hotel>
+		<orders>3</orders>
+		<time>1:00PM</time>
+	    <place>chinnagantyada</place>
+	</about>
+	<about>
+		<hotel>Four Seasons</hotel>
+		<orders>6</orders>
+		<time>12:00PM</time>
+	    <place>B.C.Road</place>
+	</about>
+                <about>
+		<hotel>Western Ramchandra</hotel>
+		<orders>3</orders>
+		<time>11:00AM</time>
+	    <place>gajuwaka</place>
+	</about>
+</swiggy>		
